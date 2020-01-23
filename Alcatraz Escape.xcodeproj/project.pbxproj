@@ -1,0 +1,612 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		89C8EAC023D9C2B400AD6AD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C8EABF23D9C2B400AD6AD8 /* AppDelegate.swift */; };
+		89C8EAC223D9C2B400AD6AD8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C8EAC123D9C2B400AD6AD8 /* SceneDelegate.swift */; };
+		89C8EAC423D9C2B400AD6AD8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C8EAC323D9C2B400AD6AD8 /* ViewController.swift */; };
+		89C8EAC723D9C2B400AD6AD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89C8EAC523D9C2B400AD6AD8 /* Main.storyboard */; };
+		89C8EACA23D9C2B500AD6AD8 /* Alcatraz_Escape.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 89C8EAC823D9C2B500AD6AD8 /* Alcatraz_Escape.xcdatamodeld */; };
+		89C8EACC23D9C2BD00AD6AD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89C8EACB23D9C2BD00AD6AD8 /* Assets.xcassets */; };
+		89C8EACF23D9C2BD00AD6AD8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89C8EACD23D9C2BD00AD6AD8 /* LaunchScreen.storyboard */; };
+		89C8EADA23D9C2BE00AD6AD8 /* Alcatraz_EscapeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C8EAD923D9C2BE00AD6AD8 /* Alcatraz_EscapeTests.swift */; };
+		89C8EAE523D9C2BE00AD6AD8 /* Alcatraz_EscapeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C8EAE423D9C2BE00AD6AD8 /* Alcatraz_EscapeUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		89C8EAD623D9C2BE00AD6AD8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 89C8EAB423D9C2B400AD6AD8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 89C8EABB23D9C2B400AD6AD8;
+			remoteInfo = "Alcatraz Escape";
+		};
+		89C8EAE123D9C2BE00AD6AD8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 89C8EAB423D9C2B400AD6AD8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 89C8EABB23D9C2B400AD6AD8;
+			remoteInfo = "Alcatraz Escape";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		89C8EABC23D9C2B400AD6AD8 /* Alcatraz Escape.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Alcatraz Escape.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		89C8EABF23D9C2B400AD6AD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		89C8EAC123D9C2B400AD6AD8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		89C8EAC323D9C2B400AD6AD8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		89C8EAC623D9C2B400AD6AD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		89C8EAC923D9C2B500AD6AD8 /* Alcatraz_Escape.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Alcatraz_Escape.xcdatamodel; sourceTree = "<group>"; };
+		89C8EACB23D9C2BD00AD6AD8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		89C8EACE23D9C2BD00AD6AD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		89C8EAD023D9C2BD00AD6AD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89C8EAD523D9C2BE00AD6AD8 /* Alcatraz EscapeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Alcatraz EscapeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		89C8EAD923D9C2BE00AD6AD8 /* Alcatraz_EscapeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alcatraz_EscapeTests.swift; sourceTree = "<group>"; };
+		89C8EADB23D9C2BE00AD6AD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89C8EAE023D9C2BE00AD6AD8 /* Alcatraz EscapeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Alcatraz EscapeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		89C8EAE423D9C2BE00AD6AD8 /* Alcatraz_EscapeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alcatraz_EscapeUITests.swift; sourceTree = "<group>"; };
+		89C8EAE623D9C2BE00AD6AD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		89C8EAB923D9C2B400AD6AD8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89C8EAD223D9C2BE00AD6AD8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89C8EADD23D9C2BE00AD6AD8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		89C8EAB323D9C2B400AD6AD8 = {
+			isa = PBXGroup;
+			children = (
+				89C8EABE23D9C2B400AD6AD8 /* Alcatraz Escape */,
+				89C8EAD823D9C2BE00AD6AD8 /* Alcatraz EscapeTests */,
+				89C8EAE323D9C2BE00AD6AD8 /* Alcatraz EscapeUITests */,
+				89C8EABD23D9C2B400AD6AD8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		89C8EABD23D9C2B400AD6AD8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				89C8EABC23D9C2B400AD6AD8 /* Alcatraz Escape.app */,
+				89C8EAD523D9C2BE00AD6AD8 /* Alcatraz EscapeTests.xctest */,
+				89C8EAE023D9C2BE00AD6AD8 /* Alcatraz EscapeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		89C8EABE23D9C2B400AD6AD8 /* Alcatraz Escape */ = {
+			isa = PBXGroup;
+			children = (
+				89C8EABF23D9C2B400AD6AD8 /* AppDelegate.swift */,
+				89C8EAC123D9C2B400AD6AD8 /* SceneDelegate.swift */,
+				89C8EAC323D9C2B400AD6AD8 /* ViewController.swift */,
+				89C8EAC523D9C2B400AD6AD8 /* Main.storyboard */,
+				89C8EACB23D9C2BD00AD6AD8 /* Assets.xcassets */,
+				89C8EACD23D9C2BD00AD6AD8 /* LaunchScreen.storyboard */,
+				89C8EAD023D9C2BD00AD6AD8 /* Info.plist */,
+				89C8EAC823D9C2B500AD6AD8 /* Alcatraz_Escape.xcdatamodeld */,
+			);
+			path = "Alcatraz Escape";
+			sourceTree = "<group>";
+		};
+		89C8EAD823D9C2BE00AD6AD8 /* Alcatraz EscapeTests */ = {
+			isa = PBXGroup;
+			children = (
+				89C8EAD923D9C2BE00AD6AD8 /* Alcatraz_EscapeTests.swift */,
+				89C8EADB23D9C2BE00AD6AD8 /* Info.plist */,
+			);
+			path = "Alcatraz EscapeTests";
+			sourceTree = "<group>";
+		};
+		89C8EAE323D9C2BE00AD6AD8 /* Alcatraz EscapeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				89C8EAE423D9C2BE00AD6AD8 /* Alcatraz_EscapeUITests.swift */,
+				89C8EAE623D9C2BE00AD6AD8 /* Info.plist */,
+			);
+			path = "Alcatraz EscapeUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		89C8EABB23D9C2B400AD6AD8 /* Alcatraz Escape */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89C8EAE923D9C2BE00AD6AD8 /* Build configuration list for PBXNativeTarget "Alcatraz Escape" */;
+			buildPhases = (
+				89C8EAB823D9C2B400AD6AD8 /* Sources */,
+				89C8EAB923D9C2B400AD6AD8 /* Frameworks */,
+				89C8EABA23D9C2B400AD6AD8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Alcatraz Escape";
+			productName = "Alcatraz Escape";
+			productReference = 89C8EABC23D9C2B400AD6AD8 /* Alcatraz Escape.app */;
+			productType = "com.apple.product-type.application";
+		};
+		89C8EAD423D9C2BE00AD6AD8 /* Alcatraz EscapeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89C8EAEC23D9C2BE00AD6AD8 /* Build configuration list for PBXNativeTarget "Alcatraz EscapeTests" */;
+			buildPhases = (
+				89C8EAD123D9C2BE00AD6AD8 /* Sources */,
+				89C8EAD223D9C2BE00AD6AD8 /* Frameworks */,
+				89C8EAD323D9C2BE00AD6AD8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				89C8EAD723D9C2BE00AD6AD8 /* PBXTargetDependency */,
+			);
+			name = "Alcatraz EscapeTests";
+			productName = "Alcatraz EscapeTests";
+			productReference = 89C8EAD523D9C2BE00AD6AD8 /* Alcatraz EscapeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		89C8EADF23D9C2BE00AD6AD8 /* Alcatraz EscapeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89C8EAEF23D9C2BE00AD6AD8 /* Build configuration list for PBXNativeTarget "Alcatraz EscapeUITests" */;
+			buildPhases = (
+				89C8EADC23D9C2BE00AD6AD8 /* Sources */,
+				89C8EADD23D9C2BE00AD6AD8 /* Frameworks */,
+				89C8EADE23D9C2BE00AD6AD8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				89C8EAE223D9C2BE00AD6AD8 /* PBXTargetDependency */,
+			);
+			name = "Alcatraz EscapeUITests";
+			productName = "Alcatraz EscapeUITests";
+			productReference = 89C8EAE023D9C2BE00AD6AD8 /* Alcatraz EscapeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		89C8EAB423D9C2B400AD6AD8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Carl Wainwright";
+				TargetAttributes = {
+					89C8EABB23D9C2B400AD6AD8 = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					89C8EAD423D9C2BE00AD6AD8 = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = 89C8EABB23D9C2B400AD6AD8;
+					};
+					89C8EADF23D9C2BE00AD6AD8 = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = 89C8EABB23D9C2B400AD6AD8;
+					};
+				};
+			};
+			buildConfigurationList = 89C8EAB723D9C2B400AD6AD8 /* Build configuration list for PBXProject "Alcatraz Escape" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 89C8EAB323D9C2B400AD6AD8;
+			productRefGroup = 89C8EABD23D9C2B400AD6AD8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				89C8EABB23D9C2B400AD6AD8 /* Alcatraz Escape */,
+				89C8EAD423D9C2BE00AD6AD8 /* Alcatraz EscapeTests */,
+				89C8EADF23D9C2BE00AD6AD8 /* Alcatraz EscapeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		89C8EABA23D9C2B400AD6AD8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89C8EACF23D9C2BD00AD6AD8 /* LaunchScreen.storyboard in Resources */,
+				89C8EACC23D9C2BD00AD6AD8 /* Assets.xcassets in Resources */,
+				89C8EAC723D9C2B400AD6AD8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89C8EAD323D9C2BE00AD6AD8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89C8EADE23D9C2BE00AD6AD8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		89C8EAB823D9C2B400AD6AD8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89C8EAC423D9C2B400AD6AD8 /* ViewController.swift in Sources */,
+				89C8EAC023D9C2B400AD6AD8 /* AppDelegate.swift in Sources */,
+				89C8EACA23D9C2B500AD6AD8 /* Alcatraz_Escape.xcdatamodeld in Sources */,
+				89C8EAC223D9C2B400AD6AD8 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89C8EAD123D9C2BE00AD6AD8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89C8EADA23D9C2BE00AD6AD8 /* Alcatraz_EscapeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89C8EADC23D9C2BE00AD6AD8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89C8EAE523D9C2BE00AD6AD8 /* Alcatraz_EscapeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		89C8EAD723D9C2BE00AD6AD8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 89C8EABB23D9C2B400AD6AD8 /* Alcatraz Escape */;
+			targetProxy = 89C8EAD623D9C2BE00AD6AD8 /* PBXContainerItemProxy */;
+		};
+		89C8EAE223D9C2BE00AD6AD8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 89C8EABB23D9C2B400AD6AD8 /* Alcatraz Escape */;
+			targetProxy = 89C8EAE123D9C2BE00AD6AD8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		89C8EAC523D9C2B400AD6AD8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				89C8EAC623D9C2B400AD6AD8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		89C8EACD23D9C2BD00AD6AD8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				89C8EACE23D9C2BD00AD6AD8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		89C8EAE723D9C2BE00AD6AD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		89C8EAE823D9C2BE00AD6AD8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		89C8EAEA23D9C2BE00AD6AD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2428X38UTQ;
+				INFOPLIST_FILE = "Alcatraz Escape/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.carlwainwright.Alcatraz-Escape";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		89C8EAEB23D9C2BE00AD6AD8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2428X38UTQ;
+				INFOPLIST_FILE = "Alcatraz Escape/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.carlwainwright.Alcatraz-Escape";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		89C8EAED23D9C2BE00AD6AD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2428X38UTQ;
+				INFOPLIST_FILE = "Alcatraz EscapeTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.carlwainwright.Alcatraz-EscapeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Alcatraz Escape.app/Alcatraz Escape";
+			};
+			name = Debug;
+		};
+		89C8EAEE23D9C2BE00AD6AD8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2428X38UTQ;
+				INFOPLIST_FILE = "Alcatraz EscapeTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.carlwainwright.Alcatraz-EscapeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Alcatraz Escape.app/Alcatraz Escape";
+			};
+			name = Release;
+		};
+		89C8EAF023D9C2BE00AD6AD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2428X38UTQ;
+				INFOPLIST_FILE = "Alcatraz EscapeUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.carlwainwright.Alcatraz-EscapeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Alcatraz Escape";
+			};
+			name = Debug;
+		};
+		89C8EAF123D9C2BE00AD6AD8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2428X38UTQ;
+				INFOPLIST_FILE = "Alcatraz EscapeUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.carlwainwright.Alcatraz-EscapeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Alcatraz Escape";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		89C8EAB723D9C2B400AD6AD8 /* Build configuration list for PBXProject "Alcatraz Escape" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89C8EAE723D9C2BE00AD6AD8 /* Debug */,
+				89C8EAE823D9C2BE00AD6AD8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		89C8EAE923D9C2BE00AD6AD8 /* Build configuration list for PBXNativeTarget "Alcatraz Escape" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89C8EAEA23D9C2BE00AD6AD8 /* Debug */,
+				89C8EAEB23D9C2BE00AD6AD8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		89C8EAEC23D9C2BE00AD6AD8 /* Build configuration list for PBXNativeTarget "Alcatraz EscapeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89C8EAED23D9C2BE00AD6AD8 /* Debug */,
+				89C8EAEE23D9C2BE00AD6AD8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		89C8EAEF23D9C2BE00AD6AD8 /* Build configuration list for PBXNativeTarget "Alcatraz EscapeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89C8EAF023D9C2BE00AD6AD8 /* Debug */,
+				89C8EAF123D9C2BE00AD6AD8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		89C8EAC823D9C2B500AD6AD8 /* Alcatraz_Escape.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				89C8EAC923D9C2B500AD6AD8 /* Alcatraz_Escape.xcdatamodel */,
+			);
+			currentVersion = 89C8EAC923D9C2B500AD6AD8 /* Alcatraz_Escape.xcdatamodel */;
+			path = Alcatraz_Escape.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 89C8EAB423D9C2B400AD6AD8 /* Project object */;
+}
