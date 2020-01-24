@@ -16,6 +16,23 @@
 		89C8EACF23D9C2BD00AD6AD8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89C8EACD23D9C2BD00AD6AD8 /* LaunchScreen.storyboard */; };
 		89C8EADA23D9C2BE00AD6AD8 /* Alcatraz_EscapeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C8EAD923D9C2BE00AD6AD8 /* Alcatraz_EscapeTests.swift */; };
 		89C8EAE523D9C2BE00AD6AD8 /* Alcatraz_EscapeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C8EAE423D9C2BE00AD6AD8 /* Alcatraz_EscapeUITests.swift */; };
+		89C8EB0C23D9C31E00AD6AD8 /* MainFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C8EB0023D9C31E00AD6AD8 /* MainFlowController.swift */; };
+		89C8EB0D23D9C31E00AD6AD8 /* MainFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C8EB0523D9C31E00AD6AD8 /* MainFactory.swift */; };
+		89C8EB1A23D9C40300AD6AD8 /* IntroScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C8EB1023D9C40300AD6AD8 /* IntroScreenModel.swift */; };
+		89C8EB1B23D9C40300AD6AD8 /* IntroScreenFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C8EB1223D9C40300AD6AD8 /* IntroScreenFlowController.swift */; };
+		89C8EB1C23D9C40300AD6AD8 /* IntroScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89C8EB1423D9C40300AD6AD8 /* IntroScreen.storyboard */; };
+		89C8EB1D23D9C40300AD6AD8 /* IntroScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C8EB1523D9C40300AD6AD8 /* IntroScreenViewController.swift */; };
+		89C8EB1E23D9C40300AD6AD8 /* IntroScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C8EB1723D9C40300AD6AD8 /* IntroScreenViewModel.swift */; };
+		89C8EB1F23D9C40300AD6AD8 /* IntroScreenFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C8EB1923D9C40300AD6AD8 /* IntroScreenFactory.swift */; };
+		89C8EB2223D9C5EE00AD6AD8 /* UIColor+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C8EB2123D9C5EE00AD6AD8 /* UIColor+extensions.swift */; };
+		89C8EB2B23D9CE4900AD6AD8 /* UITableView+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C8EB2323D9CE4800AD6AD8 /* UITableView+extensions.swift */; };
+		89C8EB2C23D9CE4900AD6AD8 /* UIViewController+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C8EB2423D9CE4800AD6AD8 /* UIViewController+extensions.swift */; };
+		89C8EB2D23D9CE4900AD6AD8 /* UIView+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C8EB2523D9CE4800AD6AD8 /* UIView+extensions.swift */; };
+		89C8EB2F23D9CE4900AD6AD8 /* UITextFields+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C8EB2723D9CE4800AD6AD8 /* UITextFields+extensions.swift */; };
+		89C8EB3023D9CE4900AD6AD8 /* UILabels+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C8EB2823D9CE4800AD6AD8 /* UILabels+extensions.swift */; };
+		89C8EB3123D9CE4900AD6AD8 /* UIFont+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C8EB2923D9CE4900AD6AD8 /* UIFont+extensions.swift */; };
+		89C8EB3223D9CE4900AD6AD8 /* UIButton+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C8EB2A23D9CE4900AD6AD8 /* UIButton+extensions.swift */; };
+		89C8EB3423DB306300AD6AD8 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C8EB3323DB306300AD6AD8 /* MainViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +68,23 @@
 		89C8EAE023D9C2BE00AD6AD8 /* Alcatraz EscapeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Alcatraz EscapeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		89C8EAE423D9C2BE00AD6AD8 /* Alcatraz_EscapeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alcatraz_EscapeUITests.swift; sourceTree = "<group>"; };
 		89C8EAE623D9C2BE00AD6AD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89C8EB0023D9C31E00AD6AD8 /* MainFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainFlowController.swift; sourceTree = "<group>"; };
+		89C8EB0523D9C31E00AD6AD8 /* MainFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainFactory.swift; sourceTree = "<group>"; };
+		89C8EB1023D9C40300AD6AD8 /* IntroScreenModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroScreenModel.swift; sourceTree = "<group>"; };
+		89C8EB1223D9C40300AD6AD8 /* IntroScreenFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroScreenFlowController.swift; sourceTree = "<group>"; };
+		89C8EB1423D9C40300AD6AD8 /* IntroScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = IntroScreen.storyboard; sourceTree = "<group>"; };
+		89C8EB1523D9C40300AD6AD8 /* IntroScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroScreenViewController.swift; sourceTree = "<group>"; };
+		89C8EB1723D9C40300AD6AD8 /* IntroScreenViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroScreenViewModel.swift; sourceTree = "<group>"; };
+		89C8EB1923D9C40300AD6AD8 /* IntroScreenFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroScreenFactory.swift; sourceTree = "<group>"; };
+		89C8EB2123D9C5EE00AD6AD8 /* UIColor+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extensions.swift"; sourceTree = "<group>"; };
+		89C8EB2323D9CE4800AD6AD8 /* UITableView+extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+extensions.swift"; sourceTree = "<group>"; };
+		89C8EB2423D9CE4800AD6AD8 /* UIViewController+extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+extensions.swift"; sourceTree = "<group>"; };
+		89C8EB2523D9CE4800AD6AD8 /* UIView+extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+extensions.swift"; sourceTree = "<group>"; };
+		89C8EB2723D9CE4800AD6AD8 /* UITextFields+extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextFields+extensions.swift"; sourceTree = "<group>"; };
+		89C8EB2823D9CE4800AD6AD8 /* UILabels+extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabels+extensions.swift"; sourceTree = "<group>"; };
+		89C8EB2923D9CE4900AD6AD8 /* UIFont+extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+extensions.swift"; sourceTree = "<group>"; };
+		89C8EB2A23D9CE4900AD6AD8 /* UIButton+extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+extensions.swift"; sourceTree = "<group>"; };
+		89C8EB3323DB306300AD6AD8 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +135,11 @@
 		89C8EABE23D9C2B400AD6AD8 /* Alcatraz Escape */ = {
 			isa = PBXGroup;
 			children = (
+				89C8EAFE23D9C31E00AD6AD8 /* Initial View */,
+				89C8EB0E23D9C40300AD6AD8 /* Intro Screen */,
+				89C8EB2023D9C5D800AD6AD8 /* Extensions */,
 				89C8EABF23D9C2B400AD6AD8 /* AppDelegate.swift */,
 				89C8EAC123D9C2B400AD6AD8 /* SceneDelegate.swift */,
-				89C8EAC323D9C2B400AD6AD8 /* ViewController.swift */,
-				89C8EAC523D9C2B400AD6AD8 /* Main.storyboard */,
 				89C8EACB23D9C2BD00AD6AD8 /* Assets.xcassets */,
 				89C8EACD23D9C2BD00AD6AD8 /* LaunchScreen.storyboard */,
 				89C8EAD023D9C2BD00AD6AD8 /* Info.plist */,
@@ -129,6 +164,126 @@
 				89C8EAE623D9C2BE00AD6AD8 /* Info.plist */,
 			);
 			path = "Alcatraz EscapeUITests";
+			sourceTree = "<group>";
+		};
+		89C8EAFE23D9C31E00AD6AD8 /* Initial View */ = {
+			isa = PBXGroup;
+			children = (
+				89C8EB0123D9C31E00AD6AD8 /* Model */,
+				89C8EB0323D9C31E00AD6AD8 /* View Model */,
+				89C8EB0223D9C31E00AD6AD8 /* View */,
+				89C8EAFF23D9C31E00AD6AD8 /* FlowController */,
+				89C8EB0423D9C31E00AD6AD8 /* Factory */,
+			);
+			path = "Initial View";
+			sourceTree = "<group>";
+		};
+		89C8EAFF23D9C31E00AD6AD8 /* FlowController */ = {
+			isa = PBXGroup;
+			children = (
+				89C8EB0023D9C31E00AD6AD8 /* MainFlowController.swift */,
+			);
+			path = FlowController;
+			sourceTree = "<group>";
+		};
+		89C8EB0123D9C31E00AD6AD8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		89C8EB0223D9C31E00AD6AD8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				89C8EAC323D9C2B400AD6AD8 /* ViewController.swift */,
+				89C8EAC523D9C2B400AD6AD8 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		89C8EB0323D9C31E00AD6AD8 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				89C8EB3323DB306300AD6AD8 /* MainViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		89C8EB0423D9C31E00AD6AD8 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				89C8EB0523D9C31E00AD6AD8 /* MainFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		89C8EB0E23D9C40300AD6AD8 /* Intro Screen */ = {
+			isa = PBXGroup;
+			children = (
+				89C8EB0F23D9C40300AD6AD8 /* Model */,
+				89C8EB1623D9C40300AD6AD8 /* View Model */,
+				89C8EB1323D9C40300AD6AD8 /* View */,
+				89C8EB1123D9C40300AD6AD8 /* Flow Controller */,
+				89C8EB1823D9C40300AD6AD8 /* Factory */,
+			);
+			path = "Intro Screen";
+			sourceTree = "<group>";
+		};
+		89C8EB0F23D9C40300AD6AD8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				89C8EB1023D9C40300AD6AD8 /* IntroScreenModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		89C8EB1123D9C40300AD6AD8 /* Flow Controller */ = {
+			isa = PBXGroup;
+			children = (
+				89C8EB1223D9C40300AD6AD8 /* IntroScreenFlowController.swift */,
+			);
+			path = "Flow Controller";
+			sourceTree = "<group>";
+		};
+		89C8EB1323D9C40300AD6AD8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				89C8EB1423D9C40300AD6AD8 /* IntroScreen.storyboard */,
+				89C8EB1523D9C40300AD6AD8 /* IntroScreenViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		89C8EB1623D9C40300AD6AD8 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				89C8EB1723D9C40300AD6AD8 /* IntroScreenViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		89C8EB1823D9C40300AD6AD8 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				89C8EB1923D9C40300AD6AD8 /* IntroScreenFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		89C8EB2023D9C5D800AD6AD8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				89C8EB2A23D9CE4900AD6AD8 /* UIButton+extensions.swift */,
+				89C8EB2923D9CE4900AD6AD8 /* UIFont+extensions.swift */,
+				89C8EB2823D9CE4800AD6AD8 /* UILabels+extensions.swift */,
+				89C8EB2323D9CE4800AD6AD8 /* UITableView+extensions.swift */,
+				89C8EB2723D9CE4800AD6AD8 /* UITextFields+extensions.swift */,
+				89C8EB2523D9CE4800AD6AD8 /* UIView+extensions.swift */,
+				89C8EB2423D9CE4800AD6AD8 /* UIViewController+extensions.swift */,
+				89C8EB2123D9C5EE00AD6AD8 /* UIColor+extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +392,7 @@
 			files = (
 				89C8EACF23D9C2BD00AD6AD8 /* LaunchScreen.storyboard in Resources */,
 				89C8EACC23D9C2BD00AD6AD8 /* Assets.xcassets in Resources */,
+				89C8EB1C23D9C40300AD6AD8 /* IntroScreen.storyboard in Resources */,
 				89C8EAC723D9C2B400AD6AD8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,10 +418,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89C8EB3023D9CE4900AD6AD8 /* UILabels+extensions.swift in Sources */,
+				89C8EB0D23D9C31E00AD6AD8 /* MainFactory.swift in Sources */,
 				89C8EAC423D9C2B400AD6AD8 /* ViewController.swift in Sources */,
+				89C8EB2C23D9CE4900AD6AD8 /* UIViewController+extensions.swift in Sources */,
+				89C8EB2B23D9CE4900AD6AD8 /* UITableView+extensions.swift in Sources */,
+				89C8EB3223D9CE4900AD6AD8 /* UIButton+extensions.swift in Sources */,
 				89C8EAC023D9C2B400AD6AD8 /* AppDelegate.swift in Sources */,
+				89C8EB2F23D9CE4900AD6AD8 /* UITextFields+extensions.swift in Sources */,
+				89C8EB1B23D9C40300AD6AD8 /* IntroScreenFlowController.swift in Sources */,
+				89C8EB2D23D9CE4900AD6AD8 /* UIView+extensions.swift in Sources */,
 				89C8EACA23D9C2B500AD6AD8 /* Alcatraz_Escape.xcdatamodeld in Sources */,
+				89C8EB3123D9CE4900AD6AD8 /* UIFont+extensions.swift in Sources */,
 				89C8EAC223D9C2B400AD6AD8 /* SceneDelegate.swift in Sources */,
+				89C8EB0C23D9C31E00AD6AD8 /* MainFlowController.swift in Sources */,
+				89C8EB1D23D9C40300AD6AD8 /* IntroScreenViewController.swift in Sources */,
+				89C8EB3423DB306300AD6AD8 /* MainViewModel.swift in Sources */,
+				89C8EB1E23D9C40300AD6AD8 /* IntroScreenViewModel.swift in Sources */,
+				89C8EB1F23D9C40300AD6AD8 /* IntroScreenFactory.swift in Sources */,
+				89C8EB1A23D9C40300AD6AD8 /* IntroScreenModel.swift in Sources */,
+				89C8EB2223D9C5EE00AD6AD8 /* UIColor+extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

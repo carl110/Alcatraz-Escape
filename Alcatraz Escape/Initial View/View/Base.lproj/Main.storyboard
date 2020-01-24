@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Alcatraz_Escape" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4eP-XG-41M">
+                                <rect key="frame" x="94" y="50" width="329" height="293"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="startNewGameButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wHp-FJ-DJX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJv-lO-rAb">
+                                <rect key="frame" x="473" y="50" width="329" height="293"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="continueGameButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ujg-kT-iLr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="4eP-XG-41M" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="0iK-cf-AYy"/>
+                            <constraint firstItem="4eP-XG-41M" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="0ji-Sw-zwV"/>
+                            <constraint firstItem="pJv-lO-rAb" firstAttribute="height" secondItem="4eP-XG-41M" secondAttribute="height" id="ATN-l9-tsE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pJv-lO-rAb" secondAttribute="trailing" constant="50" id="H4y-ij-oWO"/>
+                            <constraint firstItem="pJv-lO-rAb" firstAttribute="leading" secondItem="4eP-XG-41M" secondAttribute="trailing" constant="50" id="Kgv-Zp-F99"/>
+                            <constraint firstItem="pJv-lO-rAb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="Kvv-Xa-L9m"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pJv-lO-rAb" secondAttribute="bottom" constant="50" id="NvJ-Y5-rXq"/>
+                            <constraint firstItem="pJv-lO-rAb" firstAttribute="leading" secondItem="4eP-XG-41M" secondAttribute="trailing" constant="50" id="Srj-dN-g4d"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4eP-XG-41M" secondAttribute="bottom" constant="50" id="jzU-hZ-9p2"/>
+                            <constraint firstItem="pJv-lO-rAb" firstAttribute="width" secondItem="4eP-XG-41M" secondAttribute="width" id="kPp-n7-rAW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="continueGameButton" destination="pJv-lO-rAb" id="hH4-2j-D6w"/>
+                        <outlet property="startNewGameButton" destination="4eP-XG-41M" id="9nC-x0-aIg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="130"/>
+        </scene>
+    </scenes>
+</document>
