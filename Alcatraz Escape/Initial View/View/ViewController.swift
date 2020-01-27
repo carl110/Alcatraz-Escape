@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        backgroundSetup()
+        backgroundSetup(image: UIImage(named: "paintedAlcatrazIsland")!)
         buttonSetup()
     }
     
@@ -30,13 +30,6 @@ class ViewController: UIViewController {
         startNewGameButton.mainButtonSetup()
         continueGameButton.mainButtonSetup()
         continueGameButton.setTitle("Continue Game", for: .normal)
-    }
-    
-    func backgroundSetup() {
-        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-        backgroundImage.image = UIImage(named: "paintedAlcatrazIsland")
-        backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
-        self.view.insertSubview(backgroundImage, at: 0)
     }
     
     //Create a label inside of a scrollview
@@ -90,6 +83,8 @@ class ViewController: UIViewController {
     @IBAction func continueGameButton(_ sender: Any) {
         
         //Area to add function for continuing game
+        
+        mainFlowController.showIntroScreen()
     }
 }
 

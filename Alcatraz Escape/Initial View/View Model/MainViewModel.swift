@@ -12,3 +12,17 @@ import UIKit
 class MainViewModel {
 
 }
+
+class SingletonClass {
+    
+    class var sharedInstance: SingletonClass {
+         struct Singleton {
+             static let instance = SingletonClass()
+         }
+
+         return Singleton.instance
+     }
+    
+    var cornerRoundingNumber: CGFloat = 25
+}
+

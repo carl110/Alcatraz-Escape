@@ -33,6 +33,8 @@
 		89C8EB3123D9CE4900AD6AD8 /* UIFont+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C8EB2923D9CE4900AD6AD8 /* UIFont+extensions.swift */; };
 		89C8EB3223D9CE4900AD6AD8 /* UIButton+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C8EB2A23D9CE4900AD6AD8 /* UIButton+extensions.swift */; };
 		89C8EB3423DB306300AD6AD8 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C8EB3323DB306300AD6AD8 /* MainViewModel.swift */; };
+		89C8EB3723DEFCA200AD6AD8 /* DataForInmateDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C8EB3623DEFCA200AD6AD8 /* DataForInmateDetails.swift */; };
+		89C8EB3923DF03CE00AD6AD8 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C8EB3823DF03CE00AD6AD8 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +87,8 @@
 		89C8EB2923D9CE4900AD6AD8 /* UIFont+extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+extensions.swift"; sourceTree = "<group>"; };
 		89C8EB2A23D9CE4900AD6AD8 /* UIButton+extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+extensions.swift"; sourceTree = "<group>"; };
 		89C8EB3323DB306300AD6AD8 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		89C8EB3623DEFCA200AD6AD8 /* DataForInmateDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataForInmateDetails.swift; sourceTree = "<group>"; };
+		89C8EB3823DF03CE00AD6AD8 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,12 +142,12 @@
 				89C8EAFE23D9C31E00AD6AD8 /* Initial View */,
 				89C8EB0E23D9C40300AD6AD8 /* Intro Screen */,
 				89C8EB2023D9C5D800AD6AD8 /* Extensions */,
+				89C8EB3523DEFAFF00AD6AD8 /* Core Data */,
 				89C8EABF23D9C2B400AD6AD8 /* AppDelegate.swift */,
 				89C8EAC123D9C2B400AD6AD8 /* SceneDelegate.swift */,
 				89C8EACB23D9C2BD00AD6AD8 /* Assets.xcassets */,
 				89C8EACD23D9C2BD00AD6AD8 /* LaunchScreen.storyboard */,
 				89C8EAD023D9C2BD00AD6AD8 /* Info.plist */,
-				89C8EAC823D9C2B500AD6AD8 /* Alcatraz_Escape.xcdatamodeld */,
 			);
 			path = "Alcatraz Escape";
 			sourceTree = "<group>";
@@ -284,6 +288,16 @@
 				89C8EB2123D9C5EE00AD6AD8 /* UIColor+extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		89C8EB3523DEFAFF00AD6AD8 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				89C8EAC823D9C2B500AD6AD8 /* Alcatraz_Escape.xcdatamodeld */,
+				89C8EB3623DEFCA200AD6AD8 /* DataForInmateDetails.swift */,
+				89C8EB3823DF03CE00AD6AD8 /* CoreDataManager.swift */,
+			);
+			path = "Core Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -428,6 +442,7 @@
 				89C8EB2F23D9CE4900AD6AD8 /* UITextFields+extensions.swift in Sources */,
 				89C8EB1B23D9C40300AD6AD8 /* IntroScreenFlowController.swift in Sources */,
 				89C8EB2D23D9CE4900AD6AD8 /* UIView+extensions.swift in Sources */,
+				89C8EB3923DF03CE00AD6AD8 /* CoreDataManager.swift in Sources */,
 				89C8EACA23D9C2B500AD6AD8 /* Alcatraz_Escape.xcdatamodeld in Sources */,
 				89C8EB3123D9CE4900AD6AD8 /* UIFont+extensions.swift in Sources */,
 				89C8EAC223D9C2B400AD6AD8 /* SceneDelegate.swift in Sources */,
@@ -438,6 +453,7 @@
 				89C8EB1F23D9C40300AD6AD8 /* IntroScreenFactory.swift in Sources */,
 				89C8EB1A23D9C40300AD6AD8 /* IntroScreenModel.swift in Sources */,
 				89C8EB2223D9C5EE00AD6AD8 /* UIColor+extensions.swift in Sources */,
+				89C8EB3723DEFCA200AD6AD8 /* DataForInmateDetails.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -30,7 +30,8 @@ extension UIButton {
     
     func mainButtonSetup() {
         DispatchQueue.main.async { [weak self] in
-            self?.backgroundColor = UIColor.Shades.standardGrey
+//            self?.backgroundColor = UIColor.Shades.standardGrey
+            self?.setBackgroundImage(UIImage(named: "stone"), for: .normal)
             self?.setTitleColor(UIColor.Shades.standardBlack, for: .normal)
             self?.alpha = 0.75
             self?.titleLabel?.numberOfLines = 2
@@ -47,15 +48,3 @@ extension UIButton {
 }
 
 
-class SingletonClass {
-    
-    class var sharedInstance: SingletonClass {
-         struct Singleton {
-             static let instance = SingletonClass()
-         }
-
-         return Singleton.instance
-     }
-    
-    var cornerRoundingNumber: CGFloat = 25
-}
