@@ -20,6 +20,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="m01-tZ-RTC" secondAttribute="height" multiplier="1:1" id="x7C-GW-Gf7"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="buttonOne:" destination="bKt-p6-DLz" eventType="touchUpInside" id="eL8-6N-W5X"/>
@@ -41,9 +42,21 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="CgG-69-1M1">
+                                        <rect key="frame" x="8" y="0.0" width="560" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="aeA-Yo-RHX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="jiJ-5Z-eDx" firstAttribute="trailing" secondItem="CgG-69-1M1" secondAttribute="trailing" constant="8" id="2ag-aU-bUv"/>
                                     <constraint firstItem="Kpg-rZ-9LT" firstAttribute="bottom" secondItem="836-GZ-fWe" secondAttribute="bottom" id="7we-z7-YkO"/>
+                                    <constraint firstItem="CgG-69-1M1" firstAttribute="top" secondItem="jiJ-5Z-eDx" secondAttribute="top" id="9VO-s8-w2X"/>
+                                    <constraint firstItem="CgG-69-1M1" firstAttribute="leading" secondItem="jiJ-5Z-eDx" secondAttribute="leading" constant="8" id="FMf-Te-heM"/>
                                     <constraint firstAttribute="bottom" secondItem="Kpg-rZ-9LT" secondAttribute="bottom" id="FWq-vz-2XY"/>
                                     <constraint firstItem="836-GZ-fWe" firstAttribute="trailing" secondItem="Kpg-rZ-9LT" secondAttribute="trailing" constant="8" id="GA4-jq-atf"/>
                                     <constraint firstItem="Kpg-rZ-9LT" firstAttribute="trailing" secondItem="01U-jU-gOU" secondAttribute="trailingMargin" id="K0U-7s-CuZ"/>
@@ -74,6 +87,7 @@
                         <outlet property="buttonOne" destination="m01-tZ-RTC" id="fS0-en-Ger"/>
                         <outlet property="buttonTwo" destination="82m-m7-N1z" id="JIV-2l-S0U"/>
                         <outlet property="dialogLabel" destination="Kpg-rZ-9LT" id="LCL-fa-TPZ"/>
+                        <outlet property="guardQuestions" destination="CgG-69-1M1" id="92h-Je-PRk"/>
                         <outlet property="scrollView" destination="01U-jU-gOU" id="yYP-h6-2vn"/>
                     </connections>
                 </viewController>

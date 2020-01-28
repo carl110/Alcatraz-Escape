@@ -115,9 +115,9 @@ extension UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
-    func actionAlertBox(title: String,
-                            subtitle: String,
-                            actionTitle: String,
+    func actionAlertBox(title: String?,
+                            subtitle: String?,
+                            actionTitle: String?,
                             comments: String? = nil,
                             actionHandler: ((_ comment: String?) -> Void)? = nil) {
         

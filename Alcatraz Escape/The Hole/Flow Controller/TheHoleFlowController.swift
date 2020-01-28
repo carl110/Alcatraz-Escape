@@ -1,5 +1,5 @@
 //
-//  IntroScreenFlowController.swift
+//  TheHoleFlowController.swift
 //  table setp
 //
 //  Created by Carl Wainwright.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class IntroScreenFlowController {
+class TheHoleFlowController {
         let navigationController: UINavigationController
         
         init(navigationController: UINavigationController) {
@@ -19,9 +19,11 @@ class IntroScreenFlowController {
     //Factory of view to show
         func showMain() {
             MainFactory.PushIn(navigationController: navigationController)
+            
         }
     
-    func ShowTheHole() {
-        TheHoleFactory.PushIn(navigationController: navigationController)
+    func showTheHole() {
+        MainFactory.PushIn(navigationController: navigationController)
+        
     }
 }

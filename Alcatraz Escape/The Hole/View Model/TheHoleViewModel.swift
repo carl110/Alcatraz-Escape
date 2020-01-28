@@ -1,5 +1,5 @@
 //
-//  IntroScreenViewModel.swift
+//  TheHoleViewModel.swift
 //  table setp
 //
 //  Created by Carl Wainwright.
@@ -8,7 +8,6 @@
 
 import Foundation
 
-class IntroScreenViewModel {
-    
+class TheHoleViewModel {
     
 }

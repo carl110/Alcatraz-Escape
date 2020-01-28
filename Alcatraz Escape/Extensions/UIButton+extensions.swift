@@ -30,21 +30,35 @@ extension UIButton {
     
     func mainButtonSetup() {
         DispatchQueue.main.async { [weak self] in
-//            self?.backgroundColor = UIColor.Shades.standardGrey
+            //            self?.backgroundColor = UIColor.Shades.standardGrey
             self?.setBackgroundImage(UIImage(named: "stone"), for: .normal)
             self?.setTitleColor(UIColor.Shades.standardBlack, for: .normal)
             self?.alpha = 0.75
-            self?.titleLabel?.numberOfLines = 2
+            self?.titleLabel?.numberOfLines = 0
             self?.titleLabel!.lineBreakMode = NSLineBreakMode.byWordWrapping
             self?.titleLabel?.font = UIFont.boldSystemFont(ofSize: (self?.frame.height)! / 4)
-//            self?.titleLabel?.adjustsFontSizeToFitWidth = true
+            //            self?.titleLabel?.adjustsFontSizeToFitWidth = true
             self?.centerTextHorizontally(spacing: 2)
             self?.contentVerticalAlignment = .center
             self?.roundCorners(for: .allCorners, cornerRadius: SingletonClass.sharedInstance.cornerRoundingNumber)
+            
         }
         
     }
     
+    func buttonSetup() {
+        DispatchQueue.main.async { [weak self] in
+            self?.titleLabel?.textAlignment = .center
+            self?.titleLabel?.numberOfLines = 0
+            self?.titleLabel?.adjustsFontSizeToFitWidth = true
+            self?.titleLabel?.minimumScaleFactor = 0.5
+            self?.contentEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+        
+    }
+    
+    
+}
+
 }
 
 
