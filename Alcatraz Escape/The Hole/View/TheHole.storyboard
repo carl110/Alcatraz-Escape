@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bKt-p6-DLz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bKt-p6-DLz">
     <device id="retina6_1" orientation="landscape" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,27 +15,98 @@
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XE4-hx-SJn">
-                                <rect key="frame" x="752" y="79" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qNO-ko-uHN" customClass="PuzzleCollectionView" customModule="Alcatraz_Escape" customModuleProvider="target">
+                                <rect key="frame" x="644.5" y="10" width="141.5" height="373"/>
                                 <color key="backgroundColor" red="0.0" green="0.72941176470000002" blue="0.53725490200000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" red="0.97254901959999995" green="0.95294117649999999" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="q06-oo-9Qe">
+                                    <size key="itemSize" width="73" height="72"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MyCell" id="SU0-QY-xVd" customClass="PuzzleCollectionViewCell" customModule="Alcatraz_Escape" customModuleProvider="target">
+                                        <rect key="frame" x="34.5" y="0.0" width="73" height="72"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="73" height="72"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TYf-oi-cGY">
+                                                    <rect key="frame" x="0.0" y="0.0" width="70" height="68"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <gestureRecognizers/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <gestureRecognizers/>
+                                        <size key="customSize" width="73" height="72"/>
+                                        <connections>
+                                            <outlet property="userImageView" destination="TYf-oi-cGY" id="yd5-WM-XIm"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nqp-6W-Kcv" customClass="Grid" customModule="Alcatraz_Escape" customModuleProvider="target" colorLabel="IBBuiltInLabel-Orange">
+                                <rect key="frame" x="261.5" y="10" width="373" height="373"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Nqp-6W-Kcv" secondAttribute="height" multiplier="1:1" id="HFb-Gs-MYW"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ft-QN-cce">
+                                <rect key="frame" x="54" y="10" width="197.5" height="181.5"/>
+                                <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="button:" destination="bKt-p6-DLz" eventType="touchUpInside" id="aQ8-Gh-frm"/>
+                                    <action selector="completionButton:" destination="bKt-p6-DLz" eventType="touchUpInside" id="pa6-nx-iUL"/>
                                 </connections>
                             </button>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="84D-H8-Svj" customClass="DatePickerView" customModule="Alcatraz_Escape" customModuleProvider="target">
-                                <rect key="frame" x="124" y="151" width="599" height="47"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3EP-PT-XaK">
+                                <rect key="frame" x="54" y="201.5" width="197.5" height="181.5"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="hintButton:" destination="bKt-p6-DLz" eventType="touchUpInside" id="Kom-dz-5sL"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ds7-rM-8bw">
+                                <rect key="frame" x="54" y="201.5" width="197.5" height="181.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3EP-PT-XaK" firstAttribute="top" secondItem="3Ft-QN-cce" secondAttribute="bottom" constant="10" id="14T-pu-mcW"/>
+                            <constraint firstItem="Nqp-6W-Kcv" firstAttribute="centerX" secondItem="Cv5-qL-f5o" secondAttribute="centerX" id="41a-MA-dyM"/>
+                            <constraint firstItem="3Ft-QN-cce" firstAttribute="leading" secondItem="F1o-fF-r2E" secondAttribute="leading" constant="10" id="5Ot-N9-Cwt"/>
+                            <constraint firstItem="qNO-ko-uHN" firstAttribute="leading" secondItem="Nqp-6W-Kcv" secondAttribute="trailing" constant="10" id="FYX-M3-g8v"/>
+                            <constraint firstItem="ds7-rM-8bw" firstAttribute="width" secondItem="3EP-PT-XaK" secondAttribute="width" id="H8z-hE-zCa"/>
+                            <constraint firstItem="3EP-PT-XaK" firstAttribute="width" secondItem="3Ft-QN-cce" secondAttribute="width" id="KOT-Vc-MIv"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="qNO-ko-uHN" secondAttribute="bottom" constant="10" id="KlQ-UF-8Q3"/>
+                            <constraint firstItem="Nqp-6W-Kcv" firstAttribute="top" secondItem="F1o-fF-r2E" secondAttribute="top" constant="10" id="OGH-gn-YZu"/>
+                            <constraint firstItem="3EP-PT-XaK" firstAttribute="leading" secondItem="F1o-fF-r2E" secondAttribute="leading" constant="10" id="OtE-FZ-0at"/>
+                            <constraint firstItem="ds7-rM-8bw" firstAttribute="height" secondItem="3EP-PT-XaK" secondAttribute="height" id="QDb-LF-EoQ"/>
+                            <constraint firstItem="F1o-fF-r2E" firstAttribute="bottom" secondItem="ds7-rM-8bw" secondAttribute="bottom" constant="10" id="RKq-hU-B6h"/>
+                            <constraint firstItem="F1o-fF-r2E" firstAttribute="bottom" secondItem="3EP-PT-XaK" secondAttribute="bottom" constant="10" id="SsF-fB-304"/>
+                            <constraint firstItem="Nqp-6W-Kcv" firstAttribute="leading" secondItem="ds7-rM-8bw" secondAttribute="trailing" constant="10" id="Upy-d3-nYU"/>
+                            <constraint firstItem="F1o-fF-r2E" firstAttribute="bottom" secondItem="Nqp-6W-Kcv" secondAttribute="bottom" constant="10" id="XlZ-KJ-TUP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qNO-ko-uHN" secondAttribute="trailing" constant="50" id="a18-FY-AAy"/>
+                            <constraint firstItem="3EP-PT-XaK" firstAttribute="height" secondItem="3Ft-QN-cce" secondAttribute="height" id="bvQ-sp-Twl"/>
+                            <constraint firstItem="ds7-rM-8bw" firstAttribute="top" secondItem="3Ft-QN-cce" secondAttribute="bottom" constant="10" id="d01-ZR-YsR"/>
+                            <constraint firstItem="qNO-ko-uHN" firstAttribute="top" secondItem="F1o-fF-r2E" secondAttribute="top" constant="10" id="fPi-fU-pxq"/>
+                            <constraint firstItem="3Ft-QN-cce" firstAttribute="top" secondItem="F1o-fF-r2E" secondAttribute="top" constant="10" id="hxz-6l-GON"/>
+                            <constraint firstItem="ds7-rM-8bw" firstAttribute="leading" secondItem="F1o-fF-r2E" secondAttribute="leading" constant="10" id="jFb-bE-6kK"/>
+                            <constraint firstItem="Nqp-6W-Kcv" firstAttribute="leading" secondItem="3EP-PT-XaK" secondAttribute="trailing" constant="10" id="twe-8g-fBc"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="F1o-fF-r2E"/>
                     </view>
                     <connections>
-                        <outlet property="button" destination="XE4-hx-SJn" id="Bao-ie-L9a"/>
+                        <outlet property="completionButton" destination="3Ft-QN-cce" id="hy6-Et-Sb7"/>
+                        <outlet property="countDownTimer" destination="ds7-rM-8bw" id="wpn-fy-cuG"/>
+                        <outlet property="hintButton" destination="3EP-PT-XaK" id="sx4-G3-ILa"/>
+                        <outlet property="puzzleCollectionView" destination="qNO-ko-uHN" id="xVX-Tg-jEA"/>
+                        <outlet property="puzzleGrid" destination="Nqp-6W-Kcv" id="6w6-bD-77N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vn9-pJ-Yao" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
