@@ -45,14 +45,13 @@ class PuzzleCollectionView: UICollectionView, UICollectionViewDelegate, UICollec
         let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(longPressGestureHandler(sender:)))
         
         //Shortest time required for touchsbegan to register
-        longPressGesture.minimumPressDuration = 0.151
+        longPressGesture.minimumPressDuration = 0.16
         cell.userImageView.addGestureRecognizer(longPressGesture)
         return cell
     }
     //Declare handler
     @objc func longPressGestureHandler(sender:UILongPressGestureRecognizer) {
-        
-        let initialTouch = initialTouchLocation
+
 
         //capture image of the cell
         if let cellView = sender.view {
@@ -62,7 +61,8 @@ class PuzzleCollectionView: UICollectionView, UICollectionViewDelegate, UICollec
             //look at state of gesture
             switch sender.state {
             case .began:
-                
+
+                print ("longpress started")
                 //Hide the cell in collectionView
                 cellView.isHidden = true
                 //set size for newImage and place on top of hidden cellView to allow drag
@@ -72,11 +72,15 @@ class PuzzleCollectionView: UICollectionView, UICollectionViewDelegate, UICollec
                 theHoleViewController.view.addSubview(theHoleViewController.dragView)
                 theHoleViewController.dragView.isUserInteractionEnabled = true
             case .changed:
+                
+                 print ("longpress changed")
                 //define cell and location to allow dragging
                 let dragViewCell = theHoleViewController.dragView
                 let location = sender.location(in: theHoleViewController.view)
                 dragViewCell.center = CGPoint (x: dragViewCell.center.x + (location.x - dragViewCell.center.x), y: dragViewCell.center.y + (location.y - dragViewCell.center.y))
             case .ended:
+                
+                 print ("longpress ended")
                 let puzzleCellLocation = sender.location(in: theHoleViewController.view)
                 //check if puzzle piece is within the puzzleGrid
                 if theHoleViewController.puzzleGrid.frame.contains(puzzleCellLocation) {
@@ -102,7 +106,6 @@ class PuzzleCollectionView: UICollectionView, UICollectionViewDelegate, UICollec
                     theHoleViewController.dragView.removeFromSuperview()
                 }
                 cellView.isHidden = false
-                theHoleViewController.scoreCount += 1
                 self.theHoleViewController.puzzleComplete()
             default : break
             }

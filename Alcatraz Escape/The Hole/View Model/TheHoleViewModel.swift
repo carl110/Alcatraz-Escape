@@ -12,16 +12,22 @@ import UIKit
 class TheHoleViewModel {
     
     
-    let photo = UIImage(named: "paintedAlcatrazIsland")
-    let gridSize = 2
-
+    let photoArray = [UIImage(named: "paintedAlcatrazIsland"),
+                     UIImage(named: "solitary")]
+    
+   
+    let gridSize: Int
+    let photo: UIImage
     var puzzleDictionary: [Int:UIImage]
     var images: [UIImage]
     
-    init() {
+    init(gridSize: Int) {
         
-        self.puzzleDictionary = photo!.splitImage(gridSize)
+        self.gridSize = gridSize
+        self.photo = photoArray.randomElement()!!
+        self.puzzleDictionary = photo.splitImage(gridSize)
         self.images = puzzleDictionary.values.map{$0}
+        
     }
     
 }

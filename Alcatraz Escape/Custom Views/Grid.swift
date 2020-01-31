@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+//Draw a gird using grid sze which can be changed
+
 class Grid: UIView {
     
     private var path = UIBezierPath()
@@ -17,17 +19,18 @@ class Grid: UIView {
             drawGrid()
         }
     }
+
     override func draw(_ rect: CGRect) {
         drawGrid()
-        UIColor.white.setStroke()
+        UIColor.gray.setStroke()
         path.stroke()
     }
+
     fileprivate var gridWidth: CGFloat {
 
         return bounds.width/CGFloat(gridSize)
-        
-
     }
+
     fileprivate func drawGrid() {
         
         if let subLayer = self.layer.sublayers {
@@ -38,13 +41,17 @@ class Grid: UIView {
 
         let gridLayer = CAShapeLayer()
         path = UIBezierPath()
-        path.lineWidth = 2
+        path.lineWidth = 4
+        
+        //Horizontal grid lines
         for index in 0...Int(gridSize) {
             let start = CGPoint(x: 0, y: CGFloat(index) * gridWidth)
             let end = CGPoint(x: bounds.width, y: CGFloat(index) * gridWidth)
             path.move(to: start)
             path.addLine(to: end)
         }
+        
+        //vertical grid lines
         for index in 0...Int(gridSize) {
             let start = CGPoint(x: CGFloat(index) * gridWidth, y: 0 )
             let end = CGPoint(x: CGFloat(index) * gridWidth, y:bounds.height)
@@ -52,7 +59,6 @@ class Grid: UIView {
             path.addLine(to: end)
         }
         path.close()
-
         self.layer.addSublayer(gridLayer)
         self.setNeedsDisplay()
     }

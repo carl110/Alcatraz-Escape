@@ -11,11 +11,11 @@ import UIKit
 
 class TheHoleFactory {
     
-    static func PushIn(navigationController: UINavigationController) {
+    static func PushIn(navigationController: UINavigationController, gridSize: Int) {
         
         let storyBoard = UIStoryboard(name: "TheHole", bundle: nil).instantiateInitialViewController() as! TheHoleViewController
         let flowController = TheHoleFlowController(navigationController: navigationController)
-        let viewModel = TheHoleViewModel()
+        let viewModel = TheHoleViewModel(gridSize: gridSize)
         
         storyBoard.assignDependancies(flowController: flowController, viewModel: viewModel)
         

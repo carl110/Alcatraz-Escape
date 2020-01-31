@@ -143,7 +143,7 @@ class IntroScreenViewController: UIViewController {
     
     @IBAction func buttonTwo(_ sender: Any) {
         
-        flowController.ShowTheHole()
+        flowController.ShowTheHole(gridSize: 2)
 
     }
     

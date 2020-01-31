@@ -46,6 +46,24 @@ extension UIButton {
         
     }
     
+    func speachButtonSetup() {
+        DispatchQueue.main.async { [weak self] in
+            //            self?.backgroundColor = UIColor.Shades.standardGrey
+            self?.setBackgroundImage(UIImage(named: "stone"), for: .normal)
+            self?.setTitleColor(UIColor.Shades.standardBlack, for: .normal)
+            self?.alpha = 0.75
+            self?.titleLabel?.numberOfLines = 0
+            self?.titleLabel!.lineBreakMode = NSLineBreakMode.byWordWrapping
+            self?.titleLabel?.font = UIFont.boldSystemFont(ofSize: (self?.frame.height)! / 8)
+            //            self?.titleLabel?.adjustsFontSizeToFitWidth = true
+            self?.centerTextHorizontally(spacing: 2)
+            self?.contentVerticalAlignment = .center
+            self?.roundCorners(for: .allCorners, cornerRadius: SingletonClass.sharedInstance.cornerRoundingNumber)
+            
+        }
+        
+    }
+    
     func buttonSetup() {
         DispatchQueue.main.async { [weak self] in
             self?.titleLabel?.textAlignment = .center

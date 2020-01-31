@@ -21,7 +21,7 @@ class IntroScreenFlowController {
             MainFactory.PushIn(navigationController: navigationController)
         }
     
-    func ShowTheHole() {
-        TheHoleFactory.PushIn(navigationController: navigationController)
+    func ShowTheHole(gridSize: Int) {
+        TheHoleFactory.PushIn(navigationController: navigationController, gridSize: gridSize)
     }
 }
