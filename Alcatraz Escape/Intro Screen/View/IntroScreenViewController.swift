@@ -14,7 +14,8 @@ class IntroScreenViewController: UIViewController {
     fileprivate var viewModel: IntroScreenViewModel!
     
     private let dobDatePicker : UIDatePicker = UIDatePicker()
-    private var dateOfBirth = String()
+    private var prisonerName = String()
+    private var dateOfBirth = Date()
     
     @IBOutlet weak var buttonOne: UIButton!
     @IBOutlet weak var buttonTwo: UIButton!
@@ -27,10 +28,8 @@ class IntroScreenViewController: UIViewController {
         self.flowController = flowController
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         backgroundSetup(image: UIImage(named: "oldPaper")!)
         dialogLabelSetup()
         buttonSetup()
@@ -41,17 +40,13 @@ class IntroScreenViewController: UIViewController {
         dialogLabel.text = "Welcome to Alcatraz\nThis will be your new home. You will respect your new home and all of my officers.\nWhen you are asked a questions, you will answer politely and call me and my officers Sir.\nYou will do as you are told.\nNow you will answer some simple questions so we can process you\nDo you understand?"
         dialogLabel.numberOfLines = 0
         dialogLabel.font = UIFont.init(name: "AmericanTypewriter", size: dialogLabel.font.pointSize)
-        
     }
     
     func buttonSetup() {
         buttonOne.setTitle("Yes Sir", for: .normal)
         buttonOne.mainButtonSetup()
-        
         buttonTwo.setTitle("No chance Screw...", for: .normal)
         buttonTwo.mainButtonSetup()
-       
-        
     }
     
     func guardQuestionSetup() {
@@ -62,90 +57,71 @@ class IntroScreenViewController: UIViewController {
         guardQuestions.sizeToFit()
         guardQuestions.alpha = 0
     }
-
+    
     func whatIsYourName() {
         guardQuestions.alpha = 1
-        
         guardQuestions.text = "What is your full name?"
-        
-        //        dialogLabel.text = dialogLabel.text! + "\nTell me your name?"
-               actionAlertBox(title: "Enter your first and last name below", subtitle: nil, actionTitle: "Confirm", comments: "Enter name here...") { [weak self] (name: String?) in
-                 
-                 guard let fullName = name, !fullName.isEmpty else {
-                     print ("name is emptuy")
-                     return
-                 }
-                 
-//                 CoreDataManager.shared.saveName(savedData: fullName)
-                self?.dialogLabel.text = (self?.dialogLabel.text)! + "\nTell me your name?\n*****My name is \(fullName) sir.*****"
-                
-                self?.whatsYourDateOfBirth()
-             }
+        actionAlertBox(title: "Enter your first and last name below",
+                       subtitle: nil,
+                       actionTitle: "Confirm",
+                       comments: "Enter name here...") { [weak self] (name: String?) in
+                        guard let fullName = name, !fullName.isEmpty else {
+                            print ("name is emptuy")
+                            return
+                        }
+                        self?.prisonerName = fullName
+                        self?.dialogLabel.text = (self?.dialogLabel.text)! + "\nTell me your name?\n*****My name is \(fullName) sir.*****"
+                        self?.whatsYourDateOfBirth()
+        }
     }
     
     func whatsYourDateOfBirth() {
-         
         
         //set to date only
         dobDatePicker.datePickerMode = .date
         
         //set max date to (today)
         dobDatePicker.maximumDate = Date()
-        
-            dobDatePicker.addTarget(self, action: #selector(dueDateChanged(sender:)), for: UIControl.Event.valueChanged)
+        dobDatePicker.addTarget(self, action: #selector(dueDateChanged(sender:)), for: UIControl.Event.valueChanged)
         
         //set width to what is needed and location
-            let pickerSize : CGSize = dobDatePicker.sizeThatFits(CGSize.zero)
+        let pickerSize : CGSize = dobDatePicker.sizeThatFits(CGSize.zero)
         dobDatePicker.frame = CGRect(x: dialogLabel.bounds.minX + (dialogLabel.bounds.width / 3),
-                              y: guardQuestions.bounds.height * 2 + 20,
-                              width:pickerSize.width,
-                              height: dialogLabel.bounds.height - (guardQuestions.bounds.height * 2))
-        
+                                     y: guardQuestions.bounds.height * 2 + 20,
+                                     width:pickerSize.width,
+                                     height: dialogLabel.bounds.height - (guardQuestions.bounds.height * 2))
         dobDatePicker.roundCorners(for: .allCorners, cornerRadius: SingletonClass.sharedInstance.cornerRoundingNumber)
-        
         dobDatePicker.setValue(UIColor.Shades.standardBlack, forKey: "textColor")
         dobDatePicker.backgroundColor = UIColor(patternImage: UIImage(named: "stone")!)
-    
-            // picker.backgroundColor = UIColor.blackColor()
-            self.view.addSubview(dobDatePicker)
-        
+        self.view.addSubview(dobDatePicker)
         guardQuestions.text = "Whats your Date of Birth?"
-        }
-        @objc func dueDateChanged(sender:UIDatePicker){
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateStyle = .full
-            dateFormatter.timeStyle = .none
-            
-            dateOfBirth = dateFormatter.string(from: sender.date)
-
-            buttonOne.setTitle("I was born on \(dateOfBirth), Sir.", for: .normal)
-            
-            buttonOne.enableButton()
-            buttonTwo.enableButton()
-        }
-    
+    }
+    @objc func dueDateChanged(sender:UIDatePicker){
+        dateOfBirth = sender.date
+        buttonOne.setTitle("I was born on\n\(dateOfBirth.string(format: "d MMMM yyyy")), Sir.", for: .normal)
+        buttonOne.enableButton()
+        buttonTwo.enableButton()
+    }
     
     @IBAction func buttonOne(_ sender: Any) {
-        
         if buttonOne.titleLabel?.text == "Yes Sir" {
-             whatIsYourName()
+            whatIsYourName()
             buttonOne.disableButton()
             buttonTwo.disableButton()
             buttonOne.titleLabel?.font = UIFont.boldSystemFont(ofSize: (buttonOne.titleLabel?.font.pointSize)! / 2)
             buttonTwo.titleLabel?.font = UIFont.boldSystemFont(ofSize: (buttonTwo.titleLabel?.font.pointSize)! / 2)
         } else {
-            
             dobDatePicker.removeFromSuperview()
-            dialogLabel.text = (dialogLabel.text)! + "\nWhats your date of birth?\n*****I was born on \(dateOfBirth) sir.*****"
+            guardQuestions.removeFromSuperview()
+            buttonOne.disableButton()
+            buttonTwo.disableButton()
+            CoreDataManager.shared.saveNameAndDOB(name: prisonerName, DOB: dateOfBirth)
+            dialogLabel.text = "Well well \(prisonerName), havent we been busy.\nAt the age of \(viewModel.calculateAge(dateOfBirth: dateOfBirth)) it's quite a rap sheet\(viewModel.crimes().dialog)\n\nMy god you will be \(viewModel.calculateAge(dateOfBirth: dateOfBirth) + viewModel.crimes().years) years old when you leave here. Or should I say IF...."
         }
-       
     }
     
     @IBAction func buttonTwo(_ sender: Any) {
         
-        flowController.ShowTheHole(gridSize: 2)
-
+                flowController.ShowTheHole(gridSize: 2)
     }
-    
-    
 }

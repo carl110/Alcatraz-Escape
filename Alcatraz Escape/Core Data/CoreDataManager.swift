@@ -19,7 +19,7 @@ class CoreDataManager {
         return Singleton.instance
     }
     
-    func saveName (savedData: String) {
+    func saveNameAndDOB (name: String, DOB: Date) {
         
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
@@ -30,7 +30,8 @@ class CoreDataManager {
         let entity = NSEntityDescription.entity(forEntityName: "InmateDetails", in: managedContext)!
         let managedObject = NSManagedObject(entity: entity, insertInto: managedContext)
         
-        managedObject.setValue(savedData, forKey: "name")
+        managedObject.setValue(name, forKey: "name")
+        managedObject.setValue(DOB, forKey: "dateOfBirth")
         
         do {
             try managedContext.save()
