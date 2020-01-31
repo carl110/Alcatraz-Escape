@@ -15,10 +15,12 @@ class DataForInmateDetails {
     var name: String
     var dateOfBirth: String
     var crime: String
+    var gridSize: Int16
     
     init (object: NSManagedObject) {
         self.name = object.value(forKey: "name") as! String
         self.dateOfBirth =  object.value(forKey: "dateOfBirth") as! String
         self.crime = object.value(forKey: "crime") as! String
+        self.gridSize = object.value(forKey: "gridSize") as! Int16
     }
 }

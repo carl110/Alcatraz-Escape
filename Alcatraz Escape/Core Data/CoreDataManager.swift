@@ -110,5 +110,34 @@ class CoreDataManager {
         }
         return nil
     }
+    
+    func update(object: String, updatedEntry: Any, name: String) {
+        //Update data held in coredata
+        let appDelegate =
+            UIApplication.shared.delegate as? AppDelegate
+        let managedContext = appDelegate!.persistentContainer.viewContext
+        
+        let predicate = NSPredicate(format: "name = %@", name)
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "InmateDetails")
+        fetchRequest.predicate = predicate
+        
+        do {
+            let tasks = try managedContext.fetch(fetchRequest)
+            if let last = tasks.last {
+                
+                last.setValue(updatedEntry, forKey: object)
+                
+                do {
+                    try managedContext.save()
+                    
+                } catch {
+                    let error = error as NSError
+                    fatalError("Could not save. \(error), \(error.userInfo)")
+                }
+            }
+        } catch let error as NSError {
+            print ("Could not fetch. \(error). \(error.userInfo)")
+        }
+    }
 
 }
