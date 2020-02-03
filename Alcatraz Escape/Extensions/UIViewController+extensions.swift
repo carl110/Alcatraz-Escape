@@ -141,4 +141,37 @@ extension UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
+    func addScrollingText(text: String, backgroundColour: UIColor? = UIColor.clear, duration: TimeInterval) {
+           var labelTwo: UILabel  {
+               let label = UILabel()
+               label.text = text
+               
+               label.lineBreakMode = .byWordWrapping
+               label.numberOfLines = 0
+               label.frame = CGRect(x: 40, y: UIScreen.main.bounds.maxY, width: UIScreen.main.bounds.width - 80, height: UIScreen.main.bounds.height)
+               label.backgroundColor = backgroundColour
+               label.alpha = 0.9
+               label.isUserInteractionEnabled = true
+
+               return label
+           }
+           
+           //Setup scrolllview
+           let screensize: CGRect = UIScreen.main.bounds
+           let screenWidth = screensize.width
+           let screenHeight = screensize.height
+           var scrollView: UIScrollView!
+           scrollView = UIScrollView(frame: CGRect(x: UIScreen.main.bounds.minX, y: UIScreen.main.bounds.minY, width: UIScreen.main.bounds.width, height: screenHeight))
+           scrollView.addSubview(labelTwo)
+           
+           //Scroll the text from bottom to origin point
+           UIView.animate(withDuration: duration, animations: {
+               scrollView.contentOffset = CGPoint(x: 0, y: UIScreen.main.bounds.maxY)
+           })
+           
+           scrollView.contentSize = CGSize(width: screenWidth, height: screenHeight * 2)
+           view.addSubview(scrollView)
+           
+       }
+    
 }

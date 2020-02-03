@@ -82,7 +82,7 @@ class IntroScreenViewController: UIViewController {
         
         //set max date to (today)
         dobDatePicker.maximumDate = Date()
-        dobDatePicker.addTarget(self, action: #selector(dueDateChanged(sender:)), for: UIControl.Event.valueChanged)
+        dobDatePicker.addTarget(self, action: #selector(dateChanged(sender:)), for: UIControl.Event.valueChanged)
         
         //set width to what is needed and location
         let pickerSize : CGSize = dobDatePicker.sizeThatFits(CGSize.zero)
@@ -96,11 +96,21 @@ class IntroScreenViewController: UIViewController {
         self.view.addSubview(dobDatePicker)
         guardQuestions.text = "Whats your Date of Birth?"
     }
-    @objc func dueDateChanged(sender:UIDatePicker){
+    
+    @objc func dateChanged(sender:UIDatePicker){
         dateOfBirth = sender.date
         buttonOne.setTitle("I was born on\n\(dateOfBirth.string(format: "d MMMM yyyy")), Sir.", for: .normal)
         buttonOne.enableButton()
         buttonTwo.enableButton()
+    }
+    
+    func addTapToMainScreen() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.tapFunction(sender:)))
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func tapFunction(sender:UITapGestureRecognizer) {
+        print ("Screen touched")
     }
     
     @IBAction func buttonOne(_ sender: Any) {
@@ -115,13 +125,17 @@ class IntroScreenViewController: UIViewController {
             guardQuestions.removeFromSuperview()
             buttonOne.disableButton()
             buttonTwo.disableButton()
+            dialogLabel.removeFromSuperview()
             CoreDataManager.shared.saveNameAndDOB(name: prisonerName, DOB: dateOfBirth)
-            dialogLabel.text = "Well well \(prisonerName), havent we been busy.\nAt the age of \(viewModel.calculateAge(dateOfBirth: dateOfBirth)) it's quite a rap sheet\(viewModel.crimes().dialog)\n\nMy god you will be \(viewModel.calculateAge(dateOfBirth: dateOfBirth) + viewModel.crimes().years) years old when you leave here. Or should I say IF...."
+
+            addScrollingText(text: "Well well \(prisonerName), havent we been busy.\nAt the age of \(viewModel.calculateAge(dateOfBirth: dateOfBirth)) it's quite a rap sheet\(viewModel.crimes().dialog)\n\nMy god you will be \(viewModel.calculateAge(dateOfBirth: dateOfBirth) + viewModel.crimes().years) years old when you leave here. Or should I say IF....", duration: 5)
+
+            addTapToMainScreen()
         }
     }
     
     @IBAction func buttonTwo(_ sender: Any) {
-        
-                flowController.ShowTheHole(gridSize: 2)
+        //2 is a placeholder number to be replaced by a dynamic number
+//                flowController.ShowTheHole(gridSize: 2)
     }
 }

@@ -25,10 +25,10 @@ class CoreDataManager {
             return
         }
         
-        let managedContext = appDelegate.persistentContainer.viewContext
-        
-        let entity = NSEntityDescription.entity(forEntityName: "InmateDetails", in: managedContext)!
-        let managedObject = NSManagedObject(entity: entity, insertInto: managedContext)
+         let managedContext = appDelegate.persistentContainer.viewContext
+               
+               let entity = NSEntityDescription.entity(forEntityName: "InmateDetails", in: managedContext)!
+               let managedObject = NSManagedObject(entity: entity, insertInto: managedContext)
         
         managedObject.setValue(name, forKey: "name")
         managedObject.setValue(DOB, forKey: "dateOfBirth")
