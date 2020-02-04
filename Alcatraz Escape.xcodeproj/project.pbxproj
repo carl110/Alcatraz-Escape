@@ -12,6 +12,12 @@
 		8971B3D723E44E4200B563BA /* TheHoleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8971B3D623E44E4200B563BA /* TheHoleTests.swift */; };
 		8971B3D923E44EF400B563BA /* IntroScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8971B3D823E44EF400B563BA /* IntroScreenTests.swift */; };
 		8971B3DB23E471FD00B563BA /* Date+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8971B3DA23E471FC00B563BA /* Date+extensions.swift */; };
+		8971B3EA23E98DF500B563BA /* FirstCellVisitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8971B3E023E98DF400B563BA /* FirstCellVisitModel.swift */; };
+		8971B3EB23E98DF500B563BA /* FirstCellVisitFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8971B3E223E98DF400B563BA /* FirstCellVisitFlowController.swift */; };
+		8971B3EC23E98DF500B563BA /* FirstCellVisit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8971B3E423E98DF400B563BA /* FirstCellVisit.storyboard */; };
+		8971B3ED23E98DF500B563BA /* FirstCellVisitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8971B3E523E98DF400B563BA /* FirstCellVisitViewController.swift */; };
+		8971B3EE23E98DF500B563BA /* FirstCellVisitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8971B3E723E98DF400B563BA /* FirstCellVisitViewModel.swift */; };
+		8971B3EF23E98DF500B563BA /* FirstCellVisitFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8971B3E923E98DF400B563BA /* FirstCellVisitFactory.swift */; };
 		89C8EAC023D9C2B400AD6AD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C8EABF23D9C2B400AD6AD8 /* AppDelegate.swift */; };
 		89C8EAC223D9C2B400AD6AD8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C8EAC123D9C2B400AD6AD8 /* SceneDelegate.swift */; };
 		89C8EAC423D9C2B400AD6AD8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C8EAC323D9C2B400AD6AD8 /* ViewController.swift */; };
@@ -76,6 +82,12 @@
 		8971B3D623E44E4200B563BA /* TheHoleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheHoleTests.swift; sourceTree = "<group>"; };
 		8971B3D823E44EF400B563BA /* IntroScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroScreenTests.swift; sourceTree = "<group>"; };
 		8971B3DA23E471FC00B563BA /* Date+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+extensions.swift"; sourceTree = "<group>"; };
+		8971B3E023E98DF400B563BA /* FirstCellVisitModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstCellVisitModel.swift; sourceTree = "<group>"; };
+		8971B3E223E98DF400B563BA /* FirstCellVisitFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstCellVisitFlowController.swift; sourceTree = "<group>"; };
+		8971B3E423E98DF400B563BA /* FirstCellVisit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FirstCellVisit.storyboard; sourceTree = "<group>"; };
+		8971B3E523E98DF400B563BA /* FirstCellVisitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstCellVisitViewController.swift; sourceTree = "<group>"; };
+		8971B3E723E98DF400B563BA /* FirstCellVisitViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstCellVisitViewModel.swift; sourceTree = "<group>"; };
+		8971B3E923E98DF400B563BA /* FirstCellVisitFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstCellVisitFactory.swift; sourceTree = "<group>"; };
 		89C8EABC23D9C2B400AD6AD8 /* Alcatraz Escape.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Alcatraz Escape.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		89C8EABF23D9C2B400AD6AD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89C8EAC123D9C2B400AD6AD8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -148,6 +160,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8971B3DE23E98DF400B563BA /* First Cell Visit */ = {
+			isa = PBXGroup;
+			children = (
+				8971B3DF23E98DF400B563BA /* Model */,
+				8971B3E123E98DF400B563BA /* Flow Controller */,
+				8971B3E323E98DF400B563BA /* View */,
+				8971B3E623E98DF400B563BA /* View Model */,
+				8971B3E823E98DF400B563BA /* Factory */,
+			);
+			path = "First Cell Visit";
+			sourceTree = "<group>";
+		};
+		8971B3DF23E98DF400B563BA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8971B3E023E98DF400B563BA /* FirstCellVisitModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8971B3E123E98DF400B563BA /* Flow Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8971B3E223E98DF400B563BA /* FirstCellVisitFlowController.swift */,
+			);
+			path = "Flow Controller";
+			sourceTree = "<group>";
+		};
+		8971B3E323E98DF400B563BA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8971B3E423E98DF400B563BA /* FirstCellVisit.storyboard */,
+				8971B3E523E98DF400B563BA /* FirstCellVisitViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8971B3E623E98DF400B563BA /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				8971B3E723E98DF400B563BA /* FirstCellVisitViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		8971B3E823E98DF400B563BA /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				8971B3E923E98DF400B563BA /* FirstCellVisitFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
 		89C1452B23E1D6AF00A84D96 /* PuzzleCollectionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +248,7 @@
 				89C8EAFE23D9C31E00AD6AD8 /* Initial View */,
 				89C8EB0E23D9C40300AD6AD8 /* Intro Screen */,
 				89C8EB3D23E046DC00AD6AD8 /* The Hole */,
+				8971B3DE23E98DF400B563BA /* First Cell Visit */,
 				89C8EB3A23E037B100AD6AD8 /* Custom Views */,
 				89C8EB2023D9C5D800AD6AD8 /* Extensions */,
 				89C8EB3523DEFAFF00AD6AD8 /* Core Data */,
@@ -518,6 +584,7 @@
 			files = (
 				89C8EB4B23E046DC00AD6AD8 /* TheHole.storyboard in Resources */,
 				89C8EACF23D9C2BD00AD6AD8 /* LaunchScreen.storyboard in Resources */,
+				8971B3EC23E98DF500B563BA /* FirstCellVisit.storyboard in Resources */,
 				89C8EACC23D9C2BD00AD6AD8 /* Assets.xcassets in Resources */,
 				89C8EB1C23D9C40300AD6AD8 /* IntroScreen.storyboard in Resources */,
 				89C8EAC723D9C2B400AD6AD8 /* Main.storyboard in Resources */,
@@ -548,6 +615,7 @@
 				8971B3D523E2F1A500B563BA /* PuzzleCollectionViewCell.swift in Sources */,
 				89C8EB3023D9CE4900AD6AD8 /* UILabels+extensions.swift in Sources */,
 				89C8EB3C23E037E000AD6AD8 /* DatePickerView.swift in Sources */,
+				8971B3EA23E98DF500B563BA /* FirstCellVisitModel.swift in Sources */,
 				89C8EB5823E1A95D00AD6AD8 /* CGPoint+extensions.swift in Sources */,
 				89C8EB5023E19B4300AD6AD8 /* Grid.swift in Sources */,
 				89C8EB0D23D9C31E00AD6AD8 /* MainFactory.swift in Sources */,
@@ -556,9 +624,11 @@
 				89C8EB2C23D9CE4900AD6AD8 /* UIViewController+extensions.swift in Sources */,
 				89C8EB2B23D9CE4900AD6AD8 /* UITableView+extensions.swift in Sources */,
 				89C8EB4D23E046DC00AD6AD8 /* TheHoleViewModel.swift in Sources */,
+				8971B3ED23E98DF500B563BA /* FirstCellVisitViewController.swift in Sources */,
 				89C8EB3223D9CE4900AD6AD8 /* UIButton+extensions.swift in Sources */,
 				89C8EAC023D9C2B400AD6AD8 /* AppDelegate.swift in Sources */,
 				89C8EB5623E1A7F200AD6AD8 /* Array+extensions.swift in Sources */,
+				8971B3EF23E98DF500B563BA /* FirstCellVisitFactory.swift in Sources */,
 				89C8EB2F23D9CE4900AD6AD8 /* UITextFields+extensions.swift in Sources */,
 				89C8EB1B23D9C40300AD6AD8 /* IntroScreenFlowController.swift in Sources */,
 				89C8EB4A23E046DC00AD6AD8 /* TheHoleFlowController.swift in Sources */,
@@ -571,10 +641,12 @@
 				89C8EAC223D9C2B400AD6AD8 /* SceneDelegate.swift in Sources */,
 				89C8EB4C23E046DC00AD6AD8 /* TheHoleViewController.swift in Sources */,
 				89C8EB5A23E1AC0C00AD6AD8 /* UIImage+extensions.swift in Sources */,
+				8971B3EB23E98DF500B563BA /* FirstCellVisitFlowController.swift in Sources */,
 				89C8EB4923E046DC00AD6AD8 /* TheHoleModel.swift in Sources */,
 				89C8EB0C23D9C31E00AD6AD8 /* MainFlowController.swift in Sources */,
 				89C8EB1D23D9C40300AD6AD8 /* IntroScreenViewController.swift in Sources */,
 				89C8EB3423DB306300AD6AD8 /* MainViewModel.swift in Sources */,
+				8971B3EE23E98DF500B563BA /* FirstCellVisitViewModel.swift in Sources */,
 				89C8EB1E23D9C40300AD6AD8 /* IntroScreenViewModel.swift in Sources */,
 				89C8EB1F23D9C40300AD6AD8 /* IntroScreenFactory.swift in Sources */,
 				89C8EB1A23D9C40300AD6AD8 /* IntroScreenModel.swift in Sources */,

@@ -110,7 +110,7 @@ class IntroScreenViewController: UIViewController {
     }
     
     @objc func tapFunction(sender:UITapGestureRecognizer) {
-        print ("Screen touched")
+        flowController.showFirstCellVisit()
     }
     
     @IBAction func buttonOne(_ sender: Any) {
@@ -128,7 +128,7 @@ class IntroScreenViewController: UIViewController {
             dialogLabel.removeFromSuperview()
             CoreDataManager.shared.saveNameAndDOB(name: prisonerName, DOB: dateOfBirth)
 
-            addScrollingText(text: "Well well \(prisonerName), havent we been busy.\nAt the age of \(viewModel.calculateAge(dateOfBirth: dateOfBirth)) it's quite a rap sheet\(viewModel.crimes().dialog)\n\nMy god you will be \(viewModel.calculateAge(dateOfBirth: dateOfBirth) + viewModel.crimes().years) years old when you leave here. Or should I say IF....", duration: 5)
+            addScrollingText(text: "Well well \(prisonerName), havent we been busy.\nAt the age of \(viewModel.calculateAge(dateOfBirth: dateOfBirth)) it's quite a rap sheet\(viewModel.crimes().dialog)\n\nMy god you will be \(viewModel.calculateAge(dateOfBirth: dateOfBirth) + viewModel.crimes().years) years old when you leave here. Or should I say IF.... Time to meet your cellmate", duration: 5)
 
             addTapToMainScreen()
         }
@@ -136,6 +136,6 @@ class IntroScreenViewController: UIViewController {
     
     @IBAction func buttonTwo(_ sender: Any) {
         //2 is a placeholder number to be replaced by a dynamic number
-//                flowController.ShowTheHole(gridSize: 2)
+                flowController.ShowTheHole(gridSize: 2)
     }
 }

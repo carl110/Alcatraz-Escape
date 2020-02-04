@@ -53,7 +53,7 @@ class ViewController: UIViewController {
     @IBAction func continueGameButton(_ sender: Any) {
         
         //Area to add function for continuing game
-        mainFlowController.showIntroScreen()
+        mainFlowController.showScreenImWorkingOn()
     }
 }
 

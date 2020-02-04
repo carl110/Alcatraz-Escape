@@ -1,5 +1,5 @@
 //
-//  IntroScreenFlowController.swift
+//  FirstCellVisitFlowController.swift
 //  table setp
 //
 //  Created by Carl Wainwright.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class IntroScreenFlowController {
+class FirstCellVisitFlowController {
         let navigationController: UINavigationController
         
         init(navigationController: UINavigationController) {
@@ -19,14 +19,6 @@ class IntroScreenFlowController {
     //Factory of view to show
         func showMain() {
             MainFactory.PushIn(navigationController: navigationController)
-        }
-    
-    func ShowTheHole(gridSize: Int) {
-        TheHoleFactory.PushIn(navigationController: navigationController, gridSize: gridSize)
-    }
-    
-    func showFirstCellVisit() {
-        FirstCellVisitFactory.PushIn(navigationController: navigationController)
-    }
-    
+            
+        }   
 }
