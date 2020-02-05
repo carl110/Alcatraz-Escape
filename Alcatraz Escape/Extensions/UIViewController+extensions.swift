@@ -62,7 +62,7 @@ extension UIViewController {
     
     //insert image as background
     func backgroundSetup(image: UIImage) {
-        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        let backgroundImage = UIImageView(frame: view.bounds)
         backgroundImage.image = image
         backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
         self.view.insertSubview(backgroundImage, at: 0)
@@ -148,7 +148,7 @@ extension UIViewController {
                
                label.lineBreakMode = .byWordWrapping
                label.numberOfLines = 0
-               label.frame = CGRect(x: 40, y: UIScreen.main.bounds.maxY, width: UIScreen.main.bounds.width - 80, height: UIScreen.main.bounds.height)
+               label.frame = CGRect(x: 40, y: view.bounds.maxY, width: view.bounds.width - 80, height: view.bounds.height)
                label.backgroundColor = backgroundColour
                label.alpha = 0.9
                label.isUserInteractionEnabled = true
@@ -157,21 +157,54 @@ extension UIViewController {
            }
            
            //Setup scrolllview
-           let screensize: CGRect = UIScreen.main.bounds
+           let screensize: CGRect = view.bounds
            let screenWidth = screensize.width
            let screenHeight = screensize.height
            var scrollView: UIScrollView!
-           scrollView = UIScrollView(frame: CGRect(x: UIScreen.main.bounds.minX, y: UIScreen.main.bounds.minY, width: UIScreen.main.bounds.width, height: screenHeight))
+           scrollView = UIScrollView(frame: CGRect(x: view.bounds.minX, y: view.bounds.minY, width: view.bounds.width, height: screenHeight))
            scrollView.addSubview(labelTwo)
            
            //Scroll the text from bottom to origin point
-           UIView.animate(withDuration: duration, animations: {
-               scrollView.contentOffset = CGPoint(x: 0, y: UIScreen.main.bounds.maxY)
+           UIView.animate(withDuration: duration, animations: { [weak self] in
+            scrollView.contentOffset = CGPoint(x: 0, y: self!.view.bounds.maxY)
            })
            
            scrollView.contentSize = CGSize(width: screenWidth, height: screenHeight * 2)
            view.addSubview(scrollView)
            
        }
+    
+    
+    func addSpeachBubble(text: String, tag: Int) {
+        let label =  UILabel()
+        label.numberOfLines = 0
+        label.font = UIFont.systemFont(ofSize: 18)
+        label.textColor = .white
+        label.text = text
+
+        let constraintRect = CGSize(width: view.bounds.width / 2,
+                                    height: .greatestFiniteMagnitude)
+        let boundingBox = text.boundingRect(with: constraintRect,
+                                            options: .usesLineFragmentOrigin,
+                                            attributes: [.font: label.font!],
+                                            context: nil)
+        label.frame.size = CGSize(width: ceil(boundingBox.width),
+                                  height: ceil(boundingBox.height))
+
+        let bubbleSize = CGSize(width: label.frame.width + 28,
+                                     height: label.frame.height + 20)
+
+        let bubbleView = SpeachBubble()
+        bubbleView.frame.size = bubbleSize
+        bubbleView.backgroundColor = .clear
+        bubbleView.center = CGPoint(x: view.bounds.width / 3, y: view.bounds.height / 2)
+        view.addSubview(bubbleView)
+
+        label.center = CGPoint(x: view.bounds.width / 3, y: view.bounds.height / 2)
+        
+        label.tag = tag
+        
+        view.addSubview(label)
+    }
     
 }

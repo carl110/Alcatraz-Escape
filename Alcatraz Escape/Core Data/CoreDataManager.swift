@@ -19,7 +19,7 @@ class CoreDataManager {
         return Singleton.instance
     }
     
-    func saveNameAndDOB (name: String, DOB: Date) {
+    func saveNameAndDOB (name: String, DOB: Date, sentence: Int16) {
         
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
@@ -32,6 +32,7 @@ class CoreDataManager {
         
         managedObject.setValue(name, forKey: "name")
         managedObject.setValue(DOB, forKey: "dateOfBirth")
+        managedObject.setValue(sentence, forKey: "sentence")
         
         do {
             try managedContext.save()
@@ -103,6 +104,30 @@ class CoreDataManager {
             for item in fetchedResults {
                 print (item.value(forKey: savedObject)!)
                 newArray.append(item.value(forKey: savedObject) as! String)
+                
+            }
+            return newArray
+        } catch let error as NSError {
+            print (error.description)
+        }
+        return nil
+    }
+    
+    func fetchYearsSentenced(savedObject: String) -> [Int16]? {
+        //fetch 1 item from coredata
+        let appDelegate =
+            UIApplication.shared.delegate as? AppDelegate
+        let managedContext = appDelegate!.persistentContainer.viewContext
+        
+        let fetchRequet = NSFetchRequest<NSManagedObject>(entityName: "InmateDetails")
+        
+        do {
+            let fetchedResults = try managedContext.fetch(fetchRequet)
+            
+            var newArray = [Int16]()
+            for item in fetchedResults {
+
+                newArray.append(item.value(forKey: savedObject) as! Int16)
                 
             }
             return newArray

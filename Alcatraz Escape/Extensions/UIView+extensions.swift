@@ -33,6 +33,13 @@ extension UIView {
     var selectedTextField: UITextField? {
         return textFieldsInView.filter { $0.isFirstResponder }.first
     }
+        
+    //create a border
+    func setBorder(width: CGFloat, color: UIColor) {
+        layer.borderColor = color.cgColor
+        layer.borderWidth = width
+    }
+
     
     //creates a blur effect
     func blurView(style: UIBlurEffect.Style) {

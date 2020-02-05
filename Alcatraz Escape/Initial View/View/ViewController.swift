@@ -52,8 +52,18 @@ class ViewController: UIViewController {
     }
     @IBAction func continueGameButton(_ sender: Any) {
         
+        let someDateTime = Date(timeIntervalSinceReferenceDate: -513046800)
+        
+        CoreDataManager.shared.deleteAllSavedData()
+        
+        CoreDataManager.shared.saveNameAndDOB(name: "Carl Wainwright", DOB: someDateTime, sentence: 25)
+        
         //Area to add function for continuing game
         mainFlowController.showScreenImWorkingOn()
+        
+        print ("Date is \(someDateTime)")
+        
+        print ("date in human readable = \(someDateTime.string(format: "d MMMM yyyy"))")
     }
 }
 

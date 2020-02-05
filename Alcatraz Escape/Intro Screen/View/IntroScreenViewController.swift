@@ -126,7 +126,8 @@ class IntroScreenViewController: UIViewController {
             buttonOne.disableButton()
             buttonTwo.disableButton()
             dialogLabel.removeFromSuperview()
-            CoreDataManager.shared.saveNameAndDOB(name: prisonerName, DOB: dateOfBirth)
+
+            CoreDataManager.shared.saveNameAndDOB(name: prisonerName, DOB: dateOfBirth, sentence: Int16(viewModel.crimes().years))
 
             addScrollingText(text: "Well well \(prisonerName), havent we been busy.\nAt the age of \(viewModel.calculateAge(dateOfBirth: dateOfBirth)) it's quite a rap sheet\(viewModel.crimes().dialog)\n\nMy god you will be \(viewModel.calculateAge(dateOfBirth: dateOfBirth) + viewModel.crimes().years) years old when you leave here. Or should I say IF.... Time to meet your cellmate", duration: 5)
 
