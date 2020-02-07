@@ -198,6 +198,8 @@ extension UIViewController {
         bubbleView.frame.size = bubbleSize
         bubbleView.backgroundColor = .clear
         bubbleView.center = CGPoint(x: view.bounds.width / 3, y: view.bounds.height / 2)
+        bubbleView.tag = tag
+        
         view.addSubview(bubbleView)
 
         label.center = CGPoint(x: view.bounds.width / 3, y: view.bounds.height / 2)

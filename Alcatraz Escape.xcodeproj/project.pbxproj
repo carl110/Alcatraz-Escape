@@ -20,6 +20,8 @@
 		8971B3EF23E98DF500B563BA /* FirstCellVisitFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8971B3E923E98DF400B563BA /* FirstCellVisitFactory.swift */; };
 		8998F6C023EAE4BC00853522 /* SpeachBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8998F6BF23EAE4BC00853522 /* SpeachBubble.swift */; };
 		8998F6C223EB05AE00853522 /* sequence+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8998F6C123EB05AE00853522 /* sequence+extensions.swift */; };
+		8998F6C423EC60F600853522 /* GameOver.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8998F6C323EC60F600853522 /* GameOver.xib */; };
+		8998F6C623EC612000853522 /* GameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8998F6C523EC612000853522 /* GameOver.swift */; };
 		89C8EAC023D9C2B400AD6AD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C8EABF23D9C2B400AD6AD8 /* AppDelegate.swift */; };
 		89C8EAC223D9C2B400AD6AD8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C8EAC123D9C2B400AD6AD8 /* SceneDelegate.swift */; };
 		89C8EAC423D9C2B400AD6AD8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C8EAC323D9C2B400AD6AD8 /* ViewController.swift */; };
@@ -92,6 +94,8 @@
 		8971B3E923E98DF400B563BA /* FirstCellVisitFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstCellVisitFactory.swift; sourceTree = "<group>"; };
 		8998F6BF23EAE4BC00853522 /* SpeachBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeachBubble.swift; sourceTree = "<group>"; };
 		8998F6C123EB05AE00853522 /* sequence+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "sequence+extensions.swift"; sourceTree = "<group>"; };
+		8998F6C323EC60F600853522 /* GameOver.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameOver.xib; sourceTree = "<group>"; };
+		8998F6C523EC612000853522 /* GameOver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOver.swift; sourceTree = "<group>"; };
 		89C8EABC23D9C2B400AD6AD8 /* Alcatraz Escape.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Alcatraz Escape.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		89C8EABF23D9C2B400AD6AD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89C8EAC123D9C2B400AD6AD8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -215,6 +219,15 @@
 				8971B3E923E98DF400B563BA /* FirstCellVisitFactory.swift */,
 			);
 			path = Factory;
+			sourceTree = "<group>";
+		};
+		8998F6C723EC612E00853522 /* GameOver */ = {
+			isa = PBXGroup;
+			children = (
+				8998F6C323EC60F600853522 /* GameOver.xib */,
+				8998F6C523EC612000853522 /* GameOver.swift */,
+			);
+			path = GameOver;
 			sourceTree = "<group>";
 		};
 		89C1452B23E1D6AF00A84D96 /* PuzzleCollectionView */ = {
@@ -427,6 +440,7 @@
 				89C8EB3B23E037E000AD6AD8 /* DatePickerView.swift */,
 				89C8EB4F23E19B4200AD6AD8 /* Grid.swift */,
 				8998F6BF23EAE4BC00853522 /* SpeachBubble.swift */,
+				8998F6C723EC612E00853522 /* GameOver */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -589,6 +603,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89C8EB4B23E046DC00AD6AD8 /* TheHole.storyboard in Resources */,
+				8998F6C423EC60F600853522 /* GameOver.xib in Resources */,
 				89C8EACF23D9C2BD00AD6AD8 /* LaunchScreen.storyboard in Resources */,
 				8971B3EC23E98DF500B563BA /* FirstCellVisit.storyboard in Resources */,
 				89C8EACC23D9C2BD00AD6AD8 /* Assets.xcassets in Resources */,
@@ -647,6 +662,7 @@
 				89C8EACA23D9C2B500AD6AD8 /* Alcatraz_Escape.xcdatamodeld in Sources */,
 				89C8EB3123D9CE4900AD6AD8 /* UIFont+extensions.swift in Sources */,
 				89C8EAC223D9C2B400AD6AD8 /* SceneDelegate.swift in Sources */,
+				8998F6C623EC612000853522 /* GameOver.swift in Sources */,
 				89C8EB4C23E046DC00AD6AD8 /* TheHoleViewController.swift in Sources */,
 				89C8EB5A23E1AC0C00AD6AD8 /* UIImage+extensions.swift in Sources */,
 				8971B3EB23E98DF500B563BA /* FirstCellVisitFlowController.swift in Sources */,
