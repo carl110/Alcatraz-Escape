@@ -22,6 +22,7 @@
 		8998F6C223EB05AE00853522 /* sequence+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8998F6C123EB05AE00853522 /* sequence+extensions.swift */; };
 		8998F6C423EC60F600853522 /* GameOver.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8998F6C323EC60F600853522 /* GameOver.xib */; };
 		8998F6C623EC612000853522 /* GameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8998F6C523EC612000853522 /* GameOver.swift */; };
+		89B5D48B23F2B90A00FA9957 /* Int+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B5D48A23F2B90A00FA9957 /* Int+extensions.swift */; };
 		89C8EAC023D9C2B400AD6AD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C8EABF23D9C2B400AD6AD8 /* AppDelegate.swift */; };
 		89C8EAC223D9C2B400AD6AD8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C8EAC123D9C2B400AD6AD8 /* SceneDelegate.swift */; };
 		89C8EAC423D9C2B400AD6AD8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C8EAC323D9C2B400AD6AD8 /* ViewController.swift */; };
@@ -96,6 +97,7 @@
 		8998F6C123EB05AE00853522 /* sequence+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "sequence+extensions.swift"; sourceTree = "<group>"; };
 		8998F6C323EC60F600853522 /* GameOver.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameOver.xib; sourceTree = "<group>"; };
 		8998F6C523EC612000853522 /* GameOver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOver.swift; sourceTree = "<group>"; };
+		89B5D48A23F2B90A00FA9957 /* Int+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+extensions.swift"; sourceTree = "<group>"; };
 		89C8EABC23D9C2B400AD6AD8 /* Alcatraz Escape.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Alcatraz Escape.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		89C8EABF23D9C2B400AD6AD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89C8EAC123D9C2B400AD6AD8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -419,6 +421,7 @@
 				89C8EB5923E1AC0C00AD6AD8 /* UIImage+extensions.swift */,
 				8971B3DA23E471FC00B563BA /* Date+extensions.swift */,
 				8998F6C123EB05AE00853522 /* sequence+extensions.swift */,
+				89B5D48A23F2B90A00FA9957 /* Int+extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -634,6 +637,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8971B3D523E2F1A500B563BA /* PuzzleCollectionViewCell.swift in Sources */,
+				89B5D48B23F2B90A00FA9957 /* Int+extensions.swift in Sources */,
 				89C8EB3023D9CE4900AD6AD8 /* UILabels+extensions.swift in Sources */,
 				89C8EB3C23E037E000AD6AD8 /* DatePickerView.swift in Sources */,
 				8971B3EA23E98DF500B563BA /* FirstCellVisitModel.swift in Sources */,
